@@ -1,3 +1,4 @@
+//base.js
 $(document).ready(function() {
 	console.log("DOM is ready");
 	$('.slides').slidesjs({
