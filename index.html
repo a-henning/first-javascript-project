@@ -2,9 +2,29 @@
 <html>
 	<head>
 		<title>First JavaScript Project</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 	</head>
 	<body>
-		<h1>Hello World</h1>
+		<h1>Hello, Visitor!</h1>
+
+		<div class="loginSection">
+			<h2>Please login</h2>
+			<div class="loginForm">
+				<form action="" method="post">
+					<div class="inputElement">
+						<label>Username: </label><input type="text" name="username">
+					</div>
+					<div class="inputElement">
+						<label>Password: </label><input type="password" name="password">
+					</div>
+
+					<div class="dropDown"></div>
+					<div class="inputElement">
+						<input type="submit" value="Login">
+					</div>
+				</form>
+			</div>
+		</div>
 
 		<div class="slides">
 			<img src="images/example-slide-1.jpg" alt="">
@@ -15,6 +35,7 @@
 
 		<script type="text/javascript" src="scripts/libraries/jquery.js"></script>
 		<script type="text/javascript" src="scripts/libraries/jquery.slides.min.js"></script>
+		<script type="text/javascript" src="scripts/libraries/ddslick.js"></script>
 		<script type="text/javascript" src="scripts/base.js"></script>
 	</body>
 </html>

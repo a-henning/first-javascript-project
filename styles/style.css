@@ -1,0 +1,32 @@
+body {
+	background-color: grey;
+	font-family: Verdana, sans-serif;
+}
+
+.loginSection {
+	max-width: 400px;
+	min-width: 400px;
+	margin: 0 auto;
+	padding-bottom: 5%;
+	text-align: center;
+}
+
+.loginForm {
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-radius: 10px;
+	background-color: #484848;
+}
+
+.inputElement {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.inputElement label {
+	color: white;
+}
+
+.inputElement input {
+	width: 60%;
+}
