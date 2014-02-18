@@ -22,7 +22,7 @@
     defaults = {
         data: [],
         keepJSONItemsOnTop: false,
-        width: 260,
+        width: 100,
         height: null,
         background: "#eee",
         selectText: "",
@@ -100,9 +100,11 @@
                 obj.addClass('dd-container').append(ddSelectHtml).append(ddOptionsHtml);
 
                 //Get newly created ddOptions and ddSelect to manipulate
-                var ddSelect = obj.find('.dd-select'),
+                var ddSelect = obj.find('.dd-select')
                     ddOptions = obj.find('.dd-options');
 
+                //print options. check width
+                console.log(options);
                 //Set widths
                 ddOptions.css({ width: options.width });
                 ddSelect.css({ width: options.width, background: options.background });
@@ -156,6 +158,14 @@
                 obj.find('.dd-option').on('click.ddslick', function () {
                     selectIndex(obj, $(this).closest('li').index());
                 });
+
+                //on resize
+                // obj.resize(function() {
+                //     console.log("I'm here.");
+                //     ddOptions.css({ width: w });
+                //     ddSelect.css({ width: w });
+                //     obj.css({ width: w });
+                // });
 
                 //Click anywhere to close
                 if (options.clickOffToClose) {
@@ -329,5 +339,16 @@
             }
         });
     }
+
+    // $(window).resize(function () {
+    //     var w = 100;
+    //     var obj = $(this);
+    //     var ddSelect = obj.find('.dd-select'),
+    //         ddOptions = obj.find('.dd-options');
+    //     //Set widths
+    //     ddOptions.css({ width: w });
+    //     ddSelect.css({ width: w });
+    //     obj.css({ width: w });
+    // });
 
 })(jQuery);
