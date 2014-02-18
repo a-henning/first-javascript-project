@@ -53,20 +53,25 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
+	var timeout = window.setTimeout(resizeDivs, 1000);
+	//window.clearTimeout();
+});
+
+function resizeDivs() {
 	//large screen
 	var w = 399;
 	//smartphones
 	if ($(this).innerWidth() < 480) {
 		w = 90;	
 	//iPads
-	} else if ($(this).innerWidth() < 800) {
+	} else if ($(this).innerWidth() < 900) {
 		w = 150;
 	//laptop
-	} else if ($(this).innerWidth() < 1100) {
+	} else if ($(this).innerWidth() < 1400) {
 		w = 300;
 	}
 	var parentWidth = $(".loginForm").width();
 	$(".dd-select").css({"width" : w, "margin-left" : (parentWidth - w) / 2});
 	$(".dd-options").css({"width" : w, "margin-left" : (parentWidth - w) / 2});
 	$("h1").html("InnerWidth: " + $(this).innerWidth());
-});
+}
