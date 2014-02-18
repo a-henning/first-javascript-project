@@ -1,5 +1,5 @@
 //base.js
-//Dropdown plugin data
+//Dropdown plugin data in JSON format
 var ddData = [
     {
         text: "Facebook",
@@ -31,8 +31,10 @@ var ddData = [
     }
 ];
 
+//Function executed when document is ready - loaded
 $(document).ready(function() {
 	console.log("DOM is ready");
+	//Slide animation
 	$('.slides').slidesjs({
 		width: 940,
 		height: 528,
@@ -41,6 +43,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//DropDown animation
 	$('.dropDown').ddslick({
 	    data: ddData,
 	    width: 399,
@@ -52,11 +55,12 @@ $(document).ready(function() {
 	});
 });
 
+//Function executed when windows is resized
 $(window).resize(function() {
 	var timeout = window.setTimeout(resizeDivs, 1000);
-	//window.clearTimeout();
 });
 
+//Function for resizing dropdown div's
 function resizeDivs() {
 	//large screen
 	var w = 399;
