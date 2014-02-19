@@ -60,11 +60,11 @@ body {
 }
 
 .plaxEl {
-	color: black;
+	color: white;
 }
 
 .copy {
-	color: gray;
+	color: rgb(200, 200, 200);
 }
 
 /* Slide 1 */
