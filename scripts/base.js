@@ -53,6 +53,8 @@ $(document).ready(function() {
 	        console.log(data);
 	    }
 	});
+
+	$('#slide-5 .bcg').css({"z-index" : -3});
 });
 
 //Function executed when windows is resized
